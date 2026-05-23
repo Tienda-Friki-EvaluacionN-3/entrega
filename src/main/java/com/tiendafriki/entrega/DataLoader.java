@@ -10,6 +10,11 @@ import java.time.LocalDate;
 @Configuration
 public class DataLoader {
 
+    // El DataLoader se encuentra desahabilitado para permitir las pruebas de integración
+
+
+    /*
+
     @Bean
     CommandLineRunner init(EntregaRepository repositoryEntrega) {
         return args -> {
@@ -67,5 +72,7 @@ public class DataLoader {
             }
         };
     }
+
+    */
 
 }

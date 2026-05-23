@@ -19,11 +19,18 @@ public class Entrega {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull(message = "[+] La fecha no puede estar vacia...")
+    // === NUEVO === //
+    // Relación lógica con el microservicio Envío
+
+    private Integer envioId;
+
+    // Fecha automática de creación de la entrega
+
     private LocalDate fechaEntrega;
 
-    @Pattern(regexp = "(?i)Entregado|Pendiente|", message = "[+] El estado debe ser Entregado o Pendiente...")
-    @NotBlank(message = "[+] El estado no puede estar vacio...")
+    // Estado final del intento de entrega
+
+    @Pattern(regexp = "(?i)Entregado|Fallido", message = "[+] El estado debe ser Entregado o Fallido [X_X] ...")
     private String estado;
     
 }
