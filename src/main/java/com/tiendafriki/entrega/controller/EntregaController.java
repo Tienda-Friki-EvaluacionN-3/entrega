@@ -68,7 +68,7 @@ public class EntregaController {
         return service.buscarxEnvio(envioId);
     }
 
-    @Operation(summary = "Agregar entrega", description = "Agregar una nueva entrega")
+    @Operation(summary = "Agregar entrega", description = "Agregar una nueva entrega. Estados: Entregado|Fallido")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Entrega registrada correctamente"),
             @ApiResponse(responseCode = "400", description = "Datos inválidos en la solicitud"),
